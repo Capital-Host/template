@@ -6,6 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>Formulário PDF</title>
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #pdfForm{
+        font-size: 20px;
+        max-height: 800px;
+        display: flex;    
+    }
+    fieldset{
+        width: 500px;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;   
+        flex-wrap: wrap;    
+    }
+    input{
+        border-radius: 10px;
+        border: 1px solid ;
+        padding: 5px;
+    }
+    .btn input{
+        width: 80px;
+    }
+    </style>
+
 </head>
 <body>
     <form id="pdfForm">
