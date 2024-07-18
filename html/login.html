@@ -6,13 +6,106 @@
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <link rel="stylesheet" href="/assets/css/login.css">
     <title>Document</title>
+    <style>
+        body{
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+
+.container {
+background-color: #fff;
+padding: 40px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+text-align: center;
+max-width: 300px;
+width: 100%;
+}
+
+h2 {
+color: #333;
+}
+
+button {
+background-color: #4CAF50;
+color: white;
+border: none;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-top: 20px;
+cursor: pointer;
+border-radius: 4px;
+transition: background-color 0.3s;
+}
+
+button:hover {
+background-color: #45a049;
+}
+
+input[type="password"] {
+padding: 10px;
+width: calc(100% - 22px);
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 16px;
+}
+
+.show-password {
+margin-top: 10px;
+cursor: pointer;
+color: #007bff;
+text-decoration: underline;
+font-size: 14px;
+}
+    </style>
 </head>
 <body>
+    <script>
+        function verificarSenha() {
+
+const senhaCorreta = "Sup@rte@2024";
+const senhaDigitada = document.getElementById('senha').value;
+
+if (senhaDigitada === senhaCorreta) {
+    // Redireciona para a página de login com sucesso
+    window.location.href = "../main/index.html";
+} else {
+    // Redireciona para a página de login com erro
+    alert("Senha incorreta! Tente novamente.");
+    document.getElementById('senha').value = ""; // Limpa o campo de senha
+}
+}
+
+function enviarComEnter(event) {
+if (event.key === 'Enter') {
+    verificarSenha();
+}
+}
+
+function mostrarSenha() {
+const campoSenha = document.getElementById('senha');
+if (campoSenha.type === 'password') {
+    campoSenha.type = 'text';
+} else {
+    campoSenha.type = 'password';
+}
+}
+    </script>    
     <div class="container">
         <h2>Acesso Restrito</h2>
         <input type="password" placeholder="Digite sua senha" id="senha">
         <div class="show-password" onclick="mostrarSenha()"><button class="showPass">Mostrar senha</button></div>
         <button onclick="verificarSenha()">Acessar</button>        
     </div>
-    <script src="/assets/js/password.js"></script>    
+
+
 </html>
