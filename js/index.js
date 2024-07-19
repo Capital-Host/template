@@ -8,7 +8,7 @@ document.getElementById('pdfForm').addEventListener('submit', async (event) => {
     // Carregar o template PDF
     let existingPdfBytes;
     try {
-        existingPdfBytes = await fetch('./assets/template.pdf').then(res => res.arrayBuffer());
+        existingPdfBytes = await fetch('./assets/html/template.pdf').then(res => res.arrayBuffer());
         console.log("Template PDF carregado com sucesso");
     } catch (error) {
         console.error("Erro ao carregar o template PDF:", error);

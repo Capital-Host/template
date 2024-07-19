@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Formulário PDF</title>
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #pdfForm{
+        font-size: 20px;
+        max-height: 800px;
+        display: flex;    
+    }
+    fieldset{
+        width: 500px;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;   
+        flex-wrap: wrap;    
+    }
+    input{
+        border-radius: 10px;
+        border: 1px solid ;
+        padding: 5px;
+    }
+    .btn input{
+        width: 80px;
+    }
+    </style>
+
+</head>
+<body>
+    <form id="pdfForm">
+               
+            <fieldset>
+                <h3>#Configurações</h3><br>                
+                <label for="empresa">Empresa:</label>
+                <input type="text" id="empresa" name="empresa" ><br>
+                <label for="servidorEntrada">Servidor de Entrada:</label>
+                <input type="text" id="servidorEntrada" name="servidorEntrada" ><br>
+                <label for="servidorSaida">Servidor de Saída:</label>
+                <input type="text" id="servidorSaida" name="servidorSaida" ><br>
+            
+                <label for="cpanel">Acesso ao cPanel:</label>
+                <input type="text" id="cpanel" name="cpanel" ><br>
+            </fieldset>
+        </div>
+
+        <div>
+            <fieldset>
+                <h3>#Login/ Senha</h3><br>
+                <label for="usuario">Usuário cPanel:</label>
+                <input type="text" id="usuario" name="usuario" ><br><br>
+                <label for="senha">Senha cPanel:</label>
+                <input type="text" id="senha" name="senha" ><br><br>
+
+                <label for="usuarioWP">Usuário wordpress:</label>
+                <input type="text" id="usuarioWP" name="usuarioWP" ><br><br>
+                <label for="senhaWP">Senha wordpress:</label>
+                <input type="text" id="senhaWP" name="senhaWP" ><br><br>
+
+                <label for="domain">Domínio:</label>
+                <input type="text" id="domain" name="domain" ><br><br>
+                <label for="date">Data de Criação:</label>
+                <input type="date" id="date" name="date" ><br><br>
+
+                <label for="provedor">Provedor:</label>
+                <input type="text" id="provedor" name="provedor" style="width: 200px;"><br><br>
+
+            </fieldset>
+        </div>
+
+        <div>
+            <fieldset>
+                <h3>#Email</h3><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" >
+                <label for="senhaEmail">Senha do e-mail:</label>
+                <input type="text" id="senhaEmail" name="senhaEmail" ><br>
+                
+                <label for="email2">E-mail 2:</label>
+                <input type="email" id="email2" name="email2" >
+                <label for="senhaEmail2">Senha do e-mail 2:</label>
+                <input type="text" id="senhaEmail2" name="senhaEmail2" ><br>
+                
+                <label for="email3">E-mail 3:</label>
+                <input type="email" id="email3" name="email3" >
+                <label for="senhaEmail3">Senha do e-mail 3:</label>
+                <input type="text" id="senhaEmail3" name="senhaEmail3" ><br>
+                
+                <label for="email4">E-mail 4:</label>
+                <input type="email" id="email4" name="email4" >
+                <label for="senhaEmail4">Senha do e-mail 4:</label>
+                <input type="text" id="senhaEmail4" name="senhaEmail4" ><br>
+                
+                <label for="email5">E-mail 5:</label>
+                <input type="email" id="email5" name="email5" >
+                <label for="senhaEmail5">Senha do e-mail 5:</label>
+                <input type="text" id="senhaEmail5" name="senhaEmail5">
+            </fieldset>
+        </div>
+
+        <div class="btn">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+</body>
+</html>
