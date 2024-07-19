@@ -1,6 +1,6 @@
 {
     "redirects": [
-      { "source": "/", "destination": "./html/login.html", "permanent": true }
+      { "source": "/", "destination": "./login.html", "permanent": true }
     ]
   }
   
